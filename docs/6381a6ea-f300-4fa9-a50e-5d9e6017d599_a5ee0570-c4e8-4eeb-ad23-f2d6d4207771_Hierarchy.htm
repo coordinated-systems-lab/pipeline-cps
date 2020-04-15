@@ -1,0 +1,42 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>Link / PE: Local Conditions</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_a5ee0570-c4e8-4eeb-ad23-f2d6d4207771.htm'>Property sheet</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_a5ee0570-c4e8-4eeb-ad23-f2d6d4207771_Hierarchy.htm'>Hierarchy</option>
+</select>
+</td></tr></table>
+<div style='text-align: center'><img src='6381a6ea-f300-4fa9-a50e-5d9e6017d599_a5ee0570-c4e8-4eeb-ad23-f2d6d4207771_Hierarchy.png' usemap='#mapDiagram'>
+<map name='mapDiagram'>
+<area shape='rect' coords='266,88,441,148' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_a5ee0570-c4e8-4eeb-ad23-f2d6d4207771.htm'>
+<area shape='rect' coords='41,198,216,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_48e545a7-dbf0-4fec-811f-7c8adf31faf2.htm'>
+<area shape='rect' coords='266,198,441,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_1ebccfca-0d58-47d8-932e-2b948e585121.htm'>
+<area shape='rect' coords='491,198,666,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_0ab15a08-fd46-46ab-89fc-3cb2b9b74b0f.htm'>
+</map>
+</div>
+</body></html>

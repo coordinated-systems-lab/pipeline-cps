@@ -1,0 +1,86 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>LossScenario / RTMGR: Command Intercept</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_8e9f5361-ff4c-4ffd-8c55-9f6c8346be2f.htm'>Property sheet</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_8e9f5361-ff4c-4ffd-8c55-9f6c8346be2f_Hierarchy.htm'>Hierarchy</option>
+</select>
+</td></tr></table>
+<table cellpadding='5' cellspacing='0' class='cPrimBG' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top'>
+<tr><td style='text-align: left'>
+<span id='spnViewAttributes' onclick="ViewSheet_Click('attributes')">Attributes</span>&nbsp;&nbsp;<span id='spnViewDivider_Props'>|</span>&nbsp;&nbsp;<span id='spnViewParameters' onclick="ViewSheet_Click('parameters')">Parameters</span>
+</td></tr></table>
+<table id='tblAttribSheet' cellpadding='5' cellspacing='0' class='cSecBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Name</td>
+<td>RTMGR: Command Intercept</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Number</td>
+<td>LS.3</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Description</td>
+<td><style type="text/css">
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs63D6557C{color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:9pt;font-weight:normal;font-style:normal;}
+		</style>
+		<p class="cs2654AE3A"><span class="cs63D6557C">Route Manager incorrectly forwards SCADA request.</span></p><p class="cs2654AE3A"><span class="cs63D6557C">&nbsp;</span></p><p class="cs2654AE3A"><span class="cs63D6557C">Sentinel monitors input / output SCADA messages for consistency.</span></p></td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Sentinel Detection Pattern</td>
+<td>Changing Control Input</td></tr>
+</table>
+<table id='tblParamSheet' cellpadding='5' cellspacing='0' class='cSecBG' style='display: none; width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td>(none present)</td></tr>
+</table>
+<table cellpadding='5' cellspacing='0' class='cPrimBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td class='cPrimBG' style='text-align: left'>Relationships</td></tr></table>
+<table cellpadding='5' cellspacing='0' class='cSecBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>detected by monitoring</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_fb89c5de-5fcd-4bab-9f32-1cf2cab45672.htm')">Link: SCADA.1 MGR: SCADA Messaging</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>constraint:&nbsp;</span>input request != output request</div>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_b9cef89e-4192-4df1-a073-21d1f6c36e9d.htm')">Link: SCADA.4 SEG: SCADA Messaging</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>constraint:&nbsp;</span>input request != output request</div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>is precipitated by</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_cdc78c92-1fdc-41e0-82ff-3ed67a2f4e3f.htm')">AttackVector: CAPEC.441 Malicious Logic Insertion</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>is protected by</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_f02e387d-8ba9-4ac7-9305-fc1c33bed41b.htm')">Component: C.2.1.1 Sentinel: Route</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>is remediated by</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_f6b43b64-2e7c-4b2f-8a15-366a46f832ab.htm')">ResilientMode: RM.2.1 RTMGR: Diverse Redundant Manager</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>leads to</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_f3ed67c7-9e58-4887-b3ba-2959ad4adedd.htm')">UnsafeAction: MGR.1 MGR: Misdirect Flow Rate Command</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>packaged by</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_c36efe12-7939-40ec-a4b2-64fc3a9d11ca.htm')">Package:  4-Cyber</span></div>
+</td></tr>
+</table>
+</body></html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>Component / System Context</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_abed2d1e-e7e0-4ea2-a899-d269188d334f.htm'>Property sheet</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_abed2d1e-e7e0-4ea2-a899-d269188d334f_BDD.htm'>BDD</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_abed2d1e-e7e0-4ea2-a899-d269188d334f_Hierarchy.htm'>Hierarchy</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_abed2d1e-e7e0-4ea2-a899-d269188d334f_PhysicalBlock.htm'>PhysicalBlock</option>
+</select>
+</td></tr></table>
+<table cellpadding='5' cellspacing='0' class='cPrimBG' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top'>
+<tr><td style='text-align: left'>
+<span id='spnViewAttributes' onclick="ViewSheet_Click('attributes')">Attributes</span>&nbsp;&nbsp;<span id='spnViewDivider_Props'>|</span>&nbsp;&nbsp;<span id='spnViewParameters' onclick="ViewSheet_Click('parameters')">Parameters</span>
+</td></tr></table>
+<table id='tblAttribSheet' cellpadding='5' cellspacing='0' class='cSecBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Name</td>
+<td>System Context</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Number</td>
+<td>C</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Description</td>
+<td><style type="text/css">
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs63D6557C{color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:9pt;font-weight:normal;font-style:normal;}
+		</style>
+		<p class="cs2654AE3A"><span class="cs63D6557C">The system context identifies the physical context (the environment and external systems your system interacts with) enabling you to specify the system boundary.</span></p></td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Type</td>
+<td>Context</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Purpose</td>
+<td><style type="text/css">
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs12D92753{color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:9pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+			.cs63D6557C{color:#000000;background-color:transparent;font-family:'Segoe UI';font-size:9pt;font-weight:normal;font-style:normal;}
+		</style>
+		<p class="cs2654AE3A"><span class="cs12D92753">&ldquo;Black Monday&rdquo; Scenario - Attack on Oil Pipeline Pumps</span></p><p class="cs2654AE3A"><span class="cs63D6557C">&nbsp;</span></p><p class="cs2654AE3A"><span class="cs63D6557C">Russia&rsquo;s largeness in natural gas and oil exporter by volume has impending economic downturn, causing rise in unsteadiness and leading to malicious cyberattacks to gain more control in NG and oil export.</span></p><p class="cs2654AE3A"><span class="cs63D6557C">&nbsp;</span></p><p class="cs2654AE3A"><span class="cs63D6557C">There is a cyberattack on Saudi Aramco Riyadh &amp; Yanbu Baiji and SPC refineries: 1) Reports false flow rates, pressure, temperature. 2) Russia offers world‐class cyber security services to all three countries, but installs backdoor measures.</span></p><p class="cs2654AE3A"><span class="cs63D6557C">&nbsp;</span></p><p class="cs2654AE3A"><span class="cs63D6557C">Short term effects show yield of oil decrease by 6.2M b/d, with overall 10% decrease in global oil market for 3 years and price of oil skyrockets.</span></p><p class="cs2654AE3A"><span class="cs63D6557C">&nbsp;</span></p><p class="cs2654AE3A"><span class="cs63D6557C">Long term has covert cyber control over OPEC control systems.</span></p></td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Out of Scope for Attack Analysis</td>
+<td>False</td></tr>
+</table>
+<table id='tblParamSheet' cellpadding='5' cellspacing='0' class='cSecBG' style='display: none; width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td>(none present)</td></tr>
+</table>
+<table cellpadding='5' cellspacing='0' class='cPrimBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td class='cPrimBG' style='text-align: left'>Relationships</td></tr></table>
+<table cellpadding='5' cellspacing='0' class='cSecBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>built from</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_48e545a7-dbf0-4fec-811f-7c8adf31faf2.htm')">Component: C.1 OGP: Oil &amp; Gas Pipeline</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Whole Multiplicity:&nbsp;</span>0</div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Part Multiplicity:&nbsp;</span>1</div>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_35be796a-4ae1-4818-8eee-1c611cbd14b5.htm')">Component: C.2 MA: Mission Aware</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Whole Multiplicity:&nbsp;</span>0</div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Part Multiplicity:&nbsp;</span>1</div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>documented by</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_ee4a1b48-fbe9-4a65-8948-7685b2f4f0be.htm')">Document: DOC.1 ConOps</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>packaged by</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_7a47f68a-d55f-46f6-acb4-39085805d159.htm')">Package:  Architecture</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>performs</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_fe0a8ce7-8899-48d2-9c53-08459a704867.htm')">Function: C Perform Pipeline Functions</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Behavior Type:&nbsp;</span>Atomic</div>
+</td></tr>
+</table>
+</body></html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>Component / Sentinel: Route</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_f02e387d-8ba9-4ac7-9305-fc1c33bed41b.htm'>Property sheet</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_f02e387d-8ba9-4ac7-9305-fc1c33bed41b_BDD.htm'>BDD</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_f02e387d-8ba9-4ac7-9305-fc1c33bed41b_Hierarchy.htm'>Hierarchy</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_f02e387d-8ba9-4ac7-9305-fc1c33bed41b_PhysicalBlock.htm'>PhysicalBlock</option>
+</select>
+</td></tr></table>
+<table cellpadding='5' cellspacing='0' class='cPrimBG' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top'>
+<tr><td style='text-align: left'>
+<span id='spnViewAttributes' onclick="ViewSheet_Click('attributes')">Attributes</span>&nbsp;&nbsp;<span id='spnViewDivider_Props'>|</span>&nbsp;&nbsp;<span id='spnViewParameters' onclick="ViewSheet_Click('parameters')">Parameters</span>
+</td></tr></table>
+<table id='tblAttribSheet' cellpadding='5' cellspacing='0' class='cSecBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Name</td>
+<td>Sentinel: Route</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Number</td>
+<td>C.2.1.1</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Type</td>
+<td>Sentinel</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Out of Scope for Attack Analysis</td>
+<td>False</td></tr>
+</table>
+<table id='tblParamSheet' cellpadding='5' cellspacing='0' class='cSecBG' style='display: none; width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td>(none present)</td></tr>
+</table>
+<table cellpadding='5' cellspacing='0' class='cPrimBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td class='cPrimBG' style='text-align: left'>Relationships</td></tr></table>
+<table cellpadding='5' cellspacing='0' class='cSecBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>built from</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_d4c4e5c4-54f4-439e-b354-2e62f569a223.htm')">Component: C.2.1.1.1 Sentinel: Segment</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Whole Multiplicity:&nbsp;</span>0</div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Part Multiplicity:&nbsp;</span>n</div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>built in</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_5b22ffa8-1c5e-467c-a1dc-e3c57186de83.htm')">Component: C.2.1 Sentinel: System</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Whole Multiplicity:&nbsp;</span>0</div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Part Multiplicity:&nbsp;</span>n</div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>connected to</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_2d1c8142-f908-418c-b1b8-426e429d35d2.htm')">Link: MA.1 MA: Route SCADA</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>protects against</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_8e9f5361-ff4c-4ffd-8c55-9f6c8346be2f.htm')">LossScenario: LS.3 RTMGR: Command Intercept</span></div>
+</td></tr>
+</table>
+</body></html>

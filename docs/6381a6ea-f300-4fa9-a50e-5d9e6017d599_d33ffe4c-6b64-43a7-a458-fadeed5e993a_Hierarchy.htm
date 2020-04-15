@@ -1,0 +1,44 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>ResilientMode / RTMGR: Diverse Redundant LAN</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_d33ffe4c-6b64-43a7-a458-fadeed5e993a.htm'>Property sheet</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_d33ffe4c-6b64-43a7-a458-fadeed5e993a_Hierarchy.htm'>Hierarchy</option>
+</select>
+</td></tr></table>
+<div style='text-align: center'><img src='6381a6ea-f300-4fa9-a50e-5d9e6017d599_d33ffe4c-6b64-43a7-a458-fadeed5e993a_Hierarchy.png' usemap='#mapDiagram'>
+<map name='mapDiagram'>
+<area shape='rect' coords='491,88,666,148' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_d33ffe4c-6b64-43a7-a458-fadeed5e993a.htm'>
+<area shape='rect' coords='41,198,216,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_65903553-6539-4de8-90d5-f51d66a84352.htm'>
+<area shape='rect' coords='266,198,441,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_5dc0ca7e-6def-406f-af4b-9f4bbf391500.htm'>
+<area shape='rect' coords='491,198,666,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_46d5ee2d-9c27-4fba-a568-c5e8544b21d7.htm'>
+<area shape='rect' coords='716,198,891,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_82a4cd53-56a6-480f-b052-d5024d684ad1.htm'>
+<area shape='rect' coords='941,198,1116,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_8552ebdc-369e-43ae-9ee3-277ffd1d807b.htm'>
+</map>
+</div>
+</body></html>

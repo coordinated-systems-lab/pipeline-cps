@@ -1,0 +1,72 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>ControlAction / MGR: Route Request</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_361cca38-0ea7-468e-9f0f-944cb074aee7.htm'>Property sheet</option>
+</select>
+</td></tr></table>
+<table cellpadding='5' cellspacing='0' class='cPrimBG' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top'>
+<tr><td style='text-align: left'>
+<span id='spnViewAttributes' onclick="ViewSheet_Click('attributes')">Attributes</span>&nbsp;&nbsp;<span id='spnViewDivider_Props'>|</span>&nbsp;&nbsp;<span id='spnViewParameters' onclick="ViewSheet_Click('parameters')">Parameters</span>
+</td></tr></table>
+<table id='tblAttribSheet' cellpadding='5' cellspacing='0' class='cSecBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Name</td>
+<td>MGR: Route Request</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Number</td>
+<td>OGP.2</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>Type</td>
+<td>Digital</td></tr>
+</table>
+<table id='tblParamSheet' cellpadding='5' cellspacing='0' class='cSecBG' style='display: none; width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td>(none present)</td></tr>
+</table>
+<table cellpadding='5' cellspacing='0' class='cPrimBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td class='cPrimBG' style='text-align: left'>Relationships</td></tr></table>
+<table cellpadding='5' cellspacing='0' class='cSecBG' style='width: 75%; margin-left: auto; margin-right: auto; text-align: left; vertical-align: top'>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>has variation</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_f3ed67c7-9e58-4887-b3ba-2959ad4adedd.htm')">UnsafeAction: MGR.1 MGR: Misdirect Flow Rate Command</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>output from</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_0f738828-72dc-4d50-9cad-b170c72ac775.htm')">Function: C.1.2 MGR: Perform System Management</span></div>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_b3e553d6-a663-42f8-aec0-0e01bafeeaac.htm')">Function: C.1.2.4 MGR: Forward Route Request</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>transferred by</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_005db321-4fb4-4c0d-9a56-a314c6ce9a57.htm')">Link: SCADA CN: SCADA Messaging</span></div>
+</td></tr>
+<tr><td style='font-weight: bold; width: 150px; vertical-align: top'>triggers</td>
+<td>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_86c61b59-f4d2-4282-a229-3fdb9cb8ede8.htm')">Function: C.1.3.1 RTMGR: Perform Route Management</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Queue Type:&nbsp;</span>FIFO</div>
+<div><span class='cNdeLink' style='text-decoration: underline' onclick="window.location.assign('6381a6ea-f300-4fa9-a50e-5d9e6017d599_82a4cd53-56a6-480f-b052-d5024d684ad1.htm')">Function: C.1.3.1.1 RTMGR: Forward Segment Request</span></div>
+<div style='padding-left: 25px'><span style='font-style: italic'>Queue Type:&nbsp;</span>FIFO</div>
+</td></tr>
+</table>
+</body></html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>Component / SEG: Segment</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fefe0d8c-daae-45e1-b015-6c2dc8fda3b6.htm'>Property sheet</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fefe0d8c-daae-45e1-b015-6c2dc8fda3b6_BDD.htm'>BDD</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fefe0d8c-daae-45e1-b015-6c2dc8fda3b6_Hierarchy.htm'>Hierarchy</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fefe0d8c-daae-45e1-b015-6c2dc8fda3b6_PhysicalBlock.htm'>PhysicalBlock</option>
+</select>
+</td></tr></table>
+<div style='text-align: center'><img src='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fefe0d8c-daae-45e1-b015-6c2dc8fda3b6_PhysicalBlock.png' usemap='#mapDiagram'>
+<map name='mapDiagram'>
+<area shape='rect' coords='568,551,718,611' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_716a2f85-e539-4a67-87a8-c91822d96a89.htm'>
+<area shape='rect' coords='294,88,444,148' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_144e7094-20fc-4cd9-8db2-251a482d0163.htm'>
+<area shape='rect' coords='568,88,718,148' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_caf4bffd-1d6a-4e9a-aeca-0fcd29ab0603.htm'>
+<area shape='rect' coords='336,375,401,435' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_76ead991-d17e-4316-a756-3c7de8a2a594.htm'>
+<area shape='rect' coords='41,375,191,435' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_e2149f25-2464-4d97-994d-434ff1b94b75.htm'>
+<area shape='rect' coords='568,375,718,435' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_8c5a5469-d733-4d0b-a306-ea2027c1a570.htm'>
+<area shape='rect' coords='568,460,718,520' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_a103db8d-f78f-4ac1-9f16-0e4605dd3c38.htm'>
+<area shape='rect' coords='923,375,1017,435' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_22a3f4e5-c842-4c49-ba40-e476007175ca.htm'>
+<area shape='rect' coords='568,198,718,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_86cb2367-0c2d-4b6b-b6e2-f5c259b928bc.htm'>
+<area shape='rect' coords='336,600,401,660' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_848de058-5360-4122-925b-bf696742cfe6.htm'>
+<area shape='rect' coords='112,88,232,148' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_d4c4e5c4-54f4-439e-b354-2e62f569a223.htm'>
+<area shape='rect' coords='1144,375,1304,435' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_9573597c-67a5-4b69-bfce-0f60f036792e.htm'>
+<area shape='rect' coords='765,448,824,490' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_a2a5fdc7-f88e-4dc1-bd76-760ee5cf2506.htm'>
+<area shape='rect' coords='461,441,530,494' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_3f449b6f-94c4-45a8-bb3f-25fc7fd5e3d7.htm'>
+<area shape='rect' coords='364,189,379,313' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_e5131163-782b-4965-9b43-edd15652f5c5.htm'>
+<area shape='rect' coords='455,210,518,275' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_d9bf8061-c33c-4238-94ea-d76c583670e6.htm'>
+<area shape='rect' coords='777,216,833,267' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_84bba39b-6e43-4cf5-9fd3-bfdaeb647b6f.htm'>
+<area shape='rect' coords='338,438,354,576' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_b13f3124-465d-4e68-b01f-79a116ec35e9.htm'>
+<area shape='rect' coords='427,374,522,390' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_1a487db7-bd80-4bd6-833a-87481c18b2cf.htm'>
+<area shape='rect' coords='448,274,516,326' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_d0dbc1b0-b7ec-4350-ae28-e77408cabd61.htm'>
+<area shape='rect' coords='434,397,523,439' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_6b1160ca-d3ec-41cf-87f6-49c326ea495d.htm'>
+<area shape='rect' coords='224,374,283,390' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_c37a3f70-7813-4065-b75b-1b463f1587e0.htm'>
+<area shape='rect' coords='217,171,294,273' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_791abde4-c32d-4b3c-a793-57ba7290ddbd.htm'>
+<area shape='rect' coords='770,374,851,390' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_0ee2f619-72da-44a9-97a4-1dfcfdddc056.htm'>
+<area shape='rect' coords='770,404,845,438' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_dd212ebe-187d-4f7e-bed2-b5cb70bae1be.htm'>
+<area shape='rect' coords='778,276,836,318' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_6ec7c016-b850-48d6-b800-1a31f00c11c7.htm'>
+<area shape='rect' coords='1019,400,1122,415' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_1c4c723a-1584-45fd-ad78-2182aa67a2c2.htm'>
+</map>
+</div>
+</body></html>

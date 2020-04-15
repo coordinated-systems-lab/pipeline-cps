@@ -1,0 +1,51 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>Package / CSRM</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_eb6a40e4-6b41-4a3e-aa25-444c9a5c206d.htm'>Property sheet</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_eb6a40e4-6b41-4a3e-aa25-444c9a5c206d_BDD.htm'>BDD</option>
+</select>
+</td></tr></table>
+<div style='text-align: center'><img src='6381a6ea-f300-4fa9-a50e-5d9e6017d599_eb6a40e4-6b41-4a3e-aa25-444c9a5c206d_BDD.png' usemap='#mapDiagram'>
+<map name='mapDiagram'>
+<area shape='rect' coords='896,88,1016,188' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_eb6a40e4-6b41-4a3e-aa25-444c9a5c206d.htm'>
+<area shape='rect' coords='641,238,761,338' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_0b626db9-418b-47b0-bb92-1e06c6337d03.htm'>
+<area shape='rect' coords='811,238,931,338' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_3e407fcd-b78a-4070-bab0-d7e630ad67b0.htm'>
+<area shape='rect' coords='981,238,1101,338' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fbc80511-9863-402a-8d3b-4cadf98219f6.htm'>
+<area shape='rect' coords='1151,238,1271,338' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_c36efe12-7939-40ec-a4b2-64fc3a9d11ca.htm'>
+<area shape='rect' coords='556,388,676,488' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_7a47f68a-d55f-46f6-acb4-39085805d159.htm'>
+<area shape='rect' coords='726,388,846,488' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fbe75af5-8f36-40c6-a3fc-72a037832b68.htm'>
+<area shape='rect' coords='41,538,191,598' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_abed2d1e-e7e0-4ea2-a899-d269188d334f.htm'>
+<area shape='rect' coords='241,538,391,598' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_48e545a7-dbf0-4fec-811f-7c8adf31faf2.htm'>
+<area shape='rect' coords='441,538,591,598' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_d6be89c3-5803-4065-af7c-a08291a570d2.htm'>
+<area shape='rect' coords='641,538,791,598' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fefe0d8c-daae-45e1-b015-6c2dc8fda3b6.htm'>
+<area shape='rect' coords='841,538,991,598' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_35be796a-4ae1-4818-8eee-1c611cbd14b5.htm'>
+<area shape='rect' coords='1041,538,1191,598' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_b0857b17-6f5a-40f6-9655-455ec5d91444.htm'>
+</map>
+</div>
+</body></html>

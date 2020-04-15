@@ -1,0 +1,34 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center'>
+<table cellpadding='0' cellspacing='0' style='margin-left: auto; margin-right: auto'>
+<tr><td style='padding-top: 85px; padding-bottom: 45px'><img src='csrm.png'/></td></tr>
+<tr><td style='padding: 5px; font-weight: bold; font-size: 180%; background-color: #3f5f7b; color: white'>Project: ART-004: Pipeline - Metrics Project</td></tr>
+</table>
+<table cellpadding='0' cellspacing='0' style='width: 50%; margin-left: auto; margin-right: auto'>
+<tr><td style='padding-top: 45px; text-align: center'>v1.0</td></tr>
+</table>
+</body></html>

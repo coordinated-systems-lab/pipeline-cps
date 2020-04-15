@@ -1,0 +1,24 @@
+BODY {font: 10pt Arial}
+A {color: blue; text-decoration: none}
+A:hover {color: green}
+#divProjectName {font-size: 140%; font-weight: bold; padding-bottom: 3px}
+#divHeaderDivider {width: 100%; height: 3px; background-color: #3f5f7b}
+#tdFolderPackageTreeHeader {padding: 2px; padding-top: 5px; padding-bottom: 5px; background-color: #3f5f7b; text-align: right}
+#tdFolderPackageTree {background-color: #eaeaea}
+#tdFolderPackageTreeBorder {padding: 2px; border-right: 1px solid lightgrey}
+#tdEntitiesBorder {padding: 2px; border-right: 1px solid lightgrey}
+#spnViewFolders {color: white; cursor: pointer; text-decoration: underline}
+#spnViewPackages {color: white; cursor: pointer}
+#spnViewDivider {color: white}
+#tdEntityName {font-size: 120%; font-weight: bold; text-align: left}
+#cmbEntityViews {width: 200px}
+#spnViewAttributes {color: white; cursor: pointer; text-decoration: underline}
+#spnViewParameters {color: white; cursor: pointer}
+#spnViewDivider_Props {color: white}
+.cPrimBG {background-color: #3f5f7b; color: white}
+.cSecBG {background-color: #eaeaea; color: black}
+.cL1 {padding-top: 2px}
+.cLn {padding-top: 2px; padding-left: 20px; display: none}
+.cNde {cursor: pointer; white-space: nowrap}
+.cNdeLink {color: black; cursor: pointer; font-size: 90%}
+.cNdeLink:hover {color: green}

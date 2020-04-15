@@ -1,0 +1,46 @@
+<!DOCTYPE html Public '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GENESYS Team View</title>
+<link rel='stylesheet' type='text/css' href='GENESYS_TeamView.css'/>
+<script type='text/javascript' src='PropertySheet.js'></script>
+<script type='text/javascript'>
+function window_Load(){
+if (document.getElementById('cmbEntityViews')){
+var strPageName = window.location.pathname.split('/').pop();
+document.getElementById('cmbEntityViews').value = strPageName; }
+
+try {
+if(window.self != window.top){
+parent.SizeIFrame(document.body.scrollHeight);}
+} catch (e1) {
+try {
+parent.SizeIFrame(document.body.scrollHeight);
+}
+catch (e2) {
+// Chrome allows no cross-frame access; use HTML5 API
+window.parent.postMessage(document.body.scrollHeight, '*');
+}}}
+
+</script>
+</head>
+<body onload='window_Load()' style='text-align: center; padding-top: 10px'>
+<table cellpadding='0' cellspacing='0' style='width: 75%; margin-left: auto; margin-right: auto; vertical-align: top; padding-bottom: 10px'>
+<tr><td id='tdEntityName'>LossScenario / RTMGR: Command Intercept</td>
+<td style='text-align: right'>View:&nbsp;<select id='cmbEntityViews' onchange='View_Change()'><option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_8e9f5361-ff4c-4ffd-8c55-9f6c8346be2f.htm'>Property sheet</option>
+<option value='6381a6ea-f300-4fa9-a50e-5d9e6017d599_8e9f5361-ff4c-4ffd-8c55-9f6c8346be2f_Hierarchy.htm'>Hierarchy</option>
+</select>
+</td></tr></table>
+<div style='text-align: center'><img src='6381a6ea-f300-4fa9-a50e-5d9e6017d599_8e9f5361-ff4c-4ffd-8c55-9f6c8346be2f_Hierarchy.png' usemap='#mapDiagram'>
+<map name='mapDiagram'>
+<area shape='rect' coords='604,88,778,148' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_8e9f5361-ff4c-4ffd-8c55-9f6c8346be2f.htm'>
+<area shape='rect' coords='41,198,216,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_fb89c5de-5fcd-4bab-9f32-1cf2cab45672.htm'>
+<area shape='rect' coords='266,198,441,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_b9cef89e-4192-4df1-a073-21d1f6c36e9d.htm'>
+<area shape='rect' coords='491,198,666,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_cdc78c92-1fdc-41e0-82ff-3ed67a2f4e3f.htm'>
+<area shape='rect' coords='716,198,891,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_f02e387d-8ba9-4ac7-9305-fc1c33bed41b.htm'>
+<area shape='rect' coords='941,198,1116,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_f6b43b64-2e7c-4b2f-8a15-366a46f832ab.htm'>
+<area shape='rect' coords='1166,198,1341,258' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_f3ed67c7-9e58-4887-b3ba-2959ad4adedd.htm'>
+<area shape='rect' coords='491,308,666,368' href='6381a6ea-f300-4fa9-a50e-5d9e6017d599_65903553-6539-4de8-90d5-f51d66a84352.htm'>
+</map>
+</div>
+</body></html>
