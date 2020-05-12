@@ -5,7 +5,7 @@
         "id": "6381a6ea-f300-4fa9-a50e-5d9e6017d599",
         "name": "ART-004: Pipeline - Metrics Project",
         "description": "Advanced Persistent Threat - Mission Aware Metrics Project.",
-        "version": "1.0"
+        "version": "1.1"
       },
       "attackVector": [
         {
